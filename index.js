@@ -1,44 +1,49 @@
-const { Plugin } = require('powercord/entities');
+const { Plugin } = require('powercord/entities')
 
-module.exports = class HeySenko extends Plugin {
+module.exports = class HeyFurret extends Plugin {
   constructor () {
-    super();
+    super()
     this.URLs = [
-      'https://cdn.discordapp.com/attachments/460918145566375936/605158488586453131/602431001288769566.png',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146064726523934/Senko-san.gif',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146018690105376/59.jpg',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146018690105375/57.jpg',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146018228469762/65.jpg',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146018228469760/56.jpg',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146017633009705/58.jpg',
-      'https://cdn.discordapp.com/attachments/401755854744846337/605111862354509849/unknown.png',
-      'https://cdn.discordapp.com/attachments/460918145566375936/605146017196933164/62.jpg'
-    ];
+      'https://cdn.discordapp.com/emojis/600562990391230464.png',
+      'https://axolotl.club/drUhrFjh.png?key=HailTheAxolotl6YHBhJO',
+      'https://cdn.discordapp.com/attachments/578420973678755840/607333064170799134/f6f.gif',
+      'https://media.discordapp.net/attachments/580269886450696193/602658151371767838/frrrt.gif',
+      'https://media.discordapp.net/attachments/603023211608801301/603023336020246548/image0.jpg',
+      'https://cdn.discordapp.com/attachments/578356231132020758/600530368411729951/furret_dance_moves.gif',
+      'https://media.discordapp.net/attachments/296056831514509312/601475907433267214/furret_run.gif',
+      'https://cdn.discordapp.com/attachments/607335792477601887/607336138667065354/image0.jpg',
+      'https://cdn.discordapp.com/attachments/607335792477601887/607336138667065355/image2.jpg',
+      'https://cdn.discordapp.com/attachments/607335792477601887/607336778071801876/image0.jpg',
+      'https://cdn.discordapp.com/banners/578356230637223936/3ac5ea7af74ba9ac4da74b673ce3ef24.jpg',
+      'https://pbs.twimg.com/media/EBC45ssUIAMNwwX.png',
+      'https://cdn.discordapp.com/emojis/593658794668720154.png',
+      'https://cdn.discordapp.com/emojis/580528388507435009.png'
+    ]
   }
 
   startPlugin () {
     this.registerCommand(
-      'heysenko',
+      'heyfurret',
       [],
-      'Replaces every image with a random image of Senko.',
+      'Replaces every image with a random image of Furret.',
       '{c}',
-      this.heysenko.bind(this)
-    );
+      this.heyfurret.bind(this)
+    )
   }
 
   getRandomURL () {
-    return this.URLs[Math.floor(Math.random() * this.URLs.length)];
+    return this.URLs[Math.floor(Math.random() * this.URLs.length)]
   }
 
-  heysenko () {
-    document.querySelectorAll('[style*="background-image"]')
-      .forEach(({ style }) => (
-        style.backgroundImage = `url("${this.getRandomURL()}")`
-      ));
+  heyfurret () {
+    document
+      .querySelectorAll('[style*="background-image"]')
+      .forEach(
+        ({ style }) => (style.backgroundImage = `url("${this.getRandomURL()}")`)
+      )
 
-    document.querySelectorAll('img')
-      .forEach(image => (
-        image.src = this.getRandomURL()
-      ));
+    document
+      .querySelectorAll('img')
+      .forEach(image => (image.src = this.getRandomURL()))
   }
-};
+}
