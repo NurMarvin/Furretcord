@@ -17,7 +17,10 @@ module.exports = class HeyFurret extends Plugin {
       'https://cdn.discordapp.com/banners/578356230637223936/3ac5ea7af74ba9ac4da74b673ce3ef24.jpg',
       'https://pbs.twimg.com/media/EBC45ssUIAMNwwX.png',
       'https://cdn.discordapp.com/emojis/593658794668720154.png',
-      'https://cdn.discordapp.com/emojis/580528388507435009.png'
+      'https://cdn.discordapp.com/emojis/580528388507435009.png',
+      'https://cdn.discordapp.com/attachments/607335792477601887/607338895616770099/image0.jpg',
+      'https://cdn.discordapp.com/attachments/607335792477601887/607338960146137124/image1.jpg',
+      'https://cdn.discordapp.com/attachments/607335792477601887/607338960691265549/image0.gif'
     ]
   }
 
